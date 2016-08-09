@@ -24,6 +24,63 @@ body{font-size:14px;background-size: 100% 100%;background:#fff;max-width: 640px;
 .none{display: none;}
 
 body{background-color:#eee;}
+
+    
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        -webkit-transform: rotate(180deg) scale(0.6);
+        transform: rotate(180deg) scale(0.6);
+    }
+    100% {
+        -webkit-transform: rotate(360deg) scale(1);
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.ball-clip-rotate-multiple {
+    position: relative;
+}
+
+.ball-clip-rotate-multiple > div {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 2px solid #3cc51f;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    -webkit-animation: rotate 1s 0s ease-in-out infinite;
+    animation: rotate 1s 0s ease-in-out infinite;
+}
+
+.ball-clip-rotate-multiple > div:last-child {
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    border-color: #3cc51f transparent #3cc51f transparent;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
 .m-topbar{background:#ddd; height:52px;line-height: 52px; position:relative;display: -webkit-box;color: #000; z-index: 1}
 .m-topbar .back{position:relative;display:block;width:40px;height:52px; line-height: 52px;}
 .m-topbar .back i{font-size: 25px;color: #000;position: relative;left: 10px; top: 0;}
@@ -33,6 +90,8 @@ body{background-color:#eee;}
 .m-topbar span{color: #000;}
 
 .login-box{padding-top: 40px;}
+.login-box .weui_label{width: 65px;}
+.login-box .sendcode{border-radius: 0;}
 #app{max-width: 640px;margin: 0 auto;}
 .login-user{width: 70px;height: 70px;border-radius: 50%;overflow: hidden;border: 2px solid rgba(255,255,255,.5);margin:0 auto;}
 .login-user img{width:100%;}
