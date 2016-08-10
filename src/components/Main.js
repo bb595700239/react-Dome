@@ -12,7 +12,6 @@ var PhoneNode = React.createClass({
         if (!myReg.test(phoneDom.value)) {
         	$.alert('手机号有误',null,null,1200,{className:'favorpop'},false)
         }
-        alert(1)
 	},
 	render:function(){
 		return (
